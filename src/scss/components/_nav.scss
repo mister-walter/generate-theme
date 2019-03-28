@@ -2,9 +2,12 @@
 
 .nav {
   padding-top: 64px;
-  padding-bottom: 64px;
+  padding-bottom: 112px;
   .nav-wrapper {
     justify-content: space-between;
+  }
+  @media (max-width: $smscreen) {
+    padding-bottom: 64px;
   }
 }
 
