@@ -54,6 +54,11 @@
           &::placeholder {
             color: $lighter-grey;
           }
+          transition: border-color 250ms ease-in-out;
+          &:focus {
+            outline: none;
+            border-color: $mid-grey;
+          }
         }
       }
     }

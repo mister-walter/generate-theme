@@ -1,18 +1,16 @@
-{% extends "base.twig" %}
-
-{% block content %}
-<div id="post-{{post.ID}}">
-  <section>
-    <div>
-      <div>
-        <div>404 Error</div>
-        <h1>Oops!</h1>
-        <p>Sorry about that... we can't seem to find the page you're looking for.</p>
-        <a href="/">
-          <span>Return Home</span>
-        </a>
-      </div>
-    </div>
-  </section>
-</div>
+{% extends "base.twig" %} {% block content %}
+<section class="not-found--wrapper flex-parent pad flex-ac flex-jc">
+  <div class="not-found--wrapper--content flex-parent flex-col flex-ac flex-jc">
+    <img
+      src="{{ theme.link }}/images/404.svg"
+      class="not-found--404"
+      aria-label="404"
+    />
+    <p class="text--body not-found--body text-center">
+      There doesn't seem to be anything here. Click
+      <a href="/" class="underline-link link-blue">here</a>
+      to go back home!
+    </p>
+  </div>
+</section>
 {% endblock %}

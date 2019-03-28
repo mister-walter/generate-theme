@@ -1,0 +1,31 @@
+.not-found--wrapper {
+  width: 100%;
+  padding-top: 79px;
+  padding-bottom: 156px;
+  @media (max-width: $smscreen) {
+    padding-top: 39px;
+    padding-bottom: 100px;
+  }
+  .not-found--wrapper--content {
+    width: 100%;
+    max-width: 509px;
+    .not-found--body {
+      width: 100%;
+      max-width: 461px;
+      color: $light-grey;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 28px;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0;
+      @media (max-width: $smscreen) {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+    .not-found--404 {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
