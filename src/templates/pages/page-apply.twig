@@ -1,0 +1,22 @@
+{% extends "base.twig" %} {% block content %}
+<section id="apply-hero">
+  <div class="content-wrapper pad">
+    <h1 class="text--h1 title">
+      {{ post.hero_title }}
+    </h1>
+    <p class="text--body body">
+      {{ post.hero_body }}
+    </p>
+    <div class="cta-wrapper">
+      <a class="cta"
+        ><button class="btn">{{ post.hero_cta_label }}</button></a
+      >
+    </div>
+    <img
+      class="hero-img"
+      src="{{ Image(post.hero_image).src }}"
+      alt="{{ Image(post.hero_image).alt }}"
+    />
+  </div>
+</section>
+{% endblock %}

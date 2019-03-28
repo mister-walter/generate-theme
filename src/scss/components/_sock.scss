@@ -1,0 +1,26 @@
+.sock--section {
+  margin-bottom: 136px;
+  justify-content: flex-end;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  .sock--wrapper {
+    width: 100%;
+    .title {
+      margin-bottom: 60px;
+      width: 100%;
+    }
+    .body,
+    .cta-wrapper {
+      max-width: 560px;
+      margin-right: 0;
+      margin-left: auto;
+    }
+    @media (min-width: $mdscreen + 1px) {
+      padding: 0 100px;
+      .title {
+        padding-left: 100px;
+      }
+    }
+  }
+}

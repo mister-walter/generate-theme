@@ -1,8 +1,8 @@
 // ==== STYLES ==== //
 /*!
-Theme Name: "CHANGE_THIS_TO_YOUR_THEME_NAME"
+Theme Name: "Generate Theme"
 Theme URI:
-Author: "CHANGE_THIS_TO_YOUR_NAME"
+Author: "Joseph Wang"
 Description: "Wordpress starter theme with Timber, developed by NU Scout"
 Version: 1.0.0
 */
@@ -15,6 +15,15 @@ Version: 1.0.0
 
 // Components: Modular elements styles
 @import 'components/nav';
+@import 'components/footer';
+@import 'components/button';
+@import 'components/sock';
+@import 'components/split_layout';
+@import 'components/images';
 
 // Pages: Import every page that has its own specific styles
 @import 'pages/home';
+@import 'pages/about';
+@import 'pages/team';
+@import 'pages/team';
+@import 'pages/apply';

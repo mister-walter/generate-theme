@@ -1,7 +1,7 @@
 // ==== CONFIGURATION ==== //
 
 // Project paths
-const project = 'CHANGE_THIS_TO_YOUR_DIRECTORY_NAME'; // The directory name for your theme; change this at the very least!
+const project = 'generate-theme'; // The directory name for your theme; change this at the very least!
 const src = './src/'; // The raw material of your theme: custom scripts, SCSS source files, PHP files, images, etc.; do not delete this folder!
 const build = './build/'; // A temporary directory containing a development version of your theme; delete it anytime
 const dist = './dist/' + project + '/'; // The distribution package that you'll be uploading to your server; delete it anytime
@@ -13,7 +13,7 @@ module.exports = {
   browsersync: {
     files: [build + '/**', '!' + build + '/**.map'], // Exclude map files
     notify: false, // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
-    open: true, // Set to false if you don't like the browser window opening automatically
+    open: false, // Set to false if you don't like the browser window opening automatically
     port: 3000, // Port number for the live version of the site; default: 3000
     proxy: 'http://localhost:8000/', // We need to use a proxy instead of the built-in server because WordPress has to do some server-side rendering for the theme to work
     watchOptions: {

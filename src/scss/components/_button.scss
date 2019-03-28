@@ -1,0 +1,23 @@
+.btn {
+  background-color: $blue;
+  padding: 16px 35px;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.22);
+  font-size: 20px;
+  font-family: $font-plex;
+  font-weight: 600;
+  letter-spacing: 1.82px;
+  -webkit-font-smoothing: antialiased;
+
+  &.ghost {
+    background-color: transparent;
+    box-shadow: none;
+    color: $black;
+  }
+}
+
+.cta-wrapper {
+  margin-top: 60px;
+}

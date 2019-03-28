@@ -1,6 +1,77 @@
-<footer>
-  <div>
-    <div>{{site.name}}</div>
-    <div>&copy; {{"now"|date('Y')}}</div>
-  </div>
+<footer class="footer">
+  <!-- <div>{{site.name}}</div> -->
+  <!-- <div>&copy; {{"now"|date('Y')}}</div> -->
+  <section class="contact-form flex-parent flex-ac flex-jc pad">
+    <div class="contact-form--wrapper flex-parent flex-ac flex-col pos-rel">
+      <p class="title text-center">Keep up to date with Generate</p>
+      <p class="body text-center">
+        Sign up for our weekly Sherman Center newsletter and updates from
+        Generate.
+      </p>
+      <div class="form--content flex-parent flex-jc">
+        <input
+          class="input--email"
+          type="email"
+          aria-label="Enter your email"
+          placeholder="Enter your email"
+        />
+        <button class="btn submit-btn">Sign up!</button>
+      </div>
+    </div>
+  </section>
+  <section class="footer-wrapper pad">
+    <div class="logo-sitemap">
+      <img class="logo" src="{{ theme.link }}/images/logo.svg" />
+      <div class="sitemap">
+        <a class="sitemap-item" href="/">Home</a>
+        <a class="sitemap-item" href="/about-us">About Us</a>
+        <a class="sitemap-item" href="/our-team">Our Team</a>
+        <a class="sitemap-item" href="/projects">Past Projects</a>
+        <a class="sitemap-item" href="/apply">How to Apply</a>
+      </div>
+    </div>
+    <div class="about-social">
+      <p class="about-snippet">
+        Generate is Northeastern’s student led design studio aimed at fostering
+        entreprenurial engineering on campus. Generate’s office is located in
+        the
+        <a
+          href="https://neu.edu/sherman"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline-link"
+          >Sherman Center</a
+        >, found in 008C Hayden Hall.
+      </p>
+      <div class="social-wrapper">
+        <a
+          href="https://facebook.com/generateNU"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-item"
+          ><img
+            class="social-icon facebook"
+            src="{{ theme.link }}/images/facebook.svg"
+        /></a>
+        <a
+          href="https://twitter.com/GenerateNU"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-item"
+          ><img
+            class="social-icon twitter"
+            src="{{ theme.link }}/images/twitter.svg"
+        /></a>
+        <a
+          href="https://www.instagram.com/generatenu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-item"
+          ><img
+            class="social-icon instagram"
+            src="{{ theme.link }}/images/instagram.svg"
+        /></a>
+      </div>
+    </div>
+  </section>
 </footer>

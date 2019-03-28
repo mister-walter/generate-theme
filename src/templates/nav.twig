@@ -1,25 +1,36 @@
 <header class="header" role="banner">
   {% block header %}
-  <nav class="nav" role="navigation">
+  <nav class="nav pad" role="navigation">
+    <div class="nav-wrapper flex-parent flex-ac">
+      <a class="home-logo" href="/"
+        ><img class="logo" src="{{ theme.link }}/images/logo-small.svg"
+      /></a>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/about-us">About Us</a></li>
+        <li class="nav-item"><a href="/our-team">Our Team</a></li>
+        <li class="nav-item"><a href="/projects">Past Projects</a></li>
+        <li class="nav-item"><a href="/apply">How to Apply</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <nav class="nav" role="navigation">
     <div class="nav__home">
-      <a class="" href="/" rel="home">{{site.name}}</a>
+      <a class="" href="/" rel="home">{{ site.name }}</a>
     </div>
     <ul class="nav__menu">
       {% for item in topNav.get_items %}
       <li class="nav__menu__item">
-        <a class="nav__menu__link {{ item.current ? 'active' : '' }}" href="{{item.get_link}}">
-          <span>{{item.title}}</span>
+        <a
+          class="nav__menu__link {{ item.current ? 'active' : '' }}"
+          href="{{ item.get_link }}"
+        >
+          <span>{{ item.title }}</span>
         </a>
       </li>
       {% endfor %}
     </ul>
-    <button class="hamburger" type="button">
-      <span class="hamburger__box">
-        <span class="hamburger__inner"></span>
-      </span>
-    </button>
-  </nav>
-  <div class="nav__mobile">
+  </nav> -->
+  <!-- <div class="nav__mobile">
     <img class="lines top" src="{{site.theme.link}}/images/mobile_menu/lines/lines_top.png" alt="lines">
     <ul>
       {% for item in mobileNav.get_items %}
@@ -31,6 +42,6 @@
       {% endfor %}
     </ul>
     <img class="lines bottom" src="{{site.theme.link}}/images/mobile_menu/lines/lines_bottom.png" alt="lines">
-  </div>
+  </div> -->
   {% endblock %}
 </header>

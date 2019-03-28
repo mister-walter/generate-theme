@@ -1,1 +1,118 @@
 // global styles here, such as basic typography, sizing, display styles, etc
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-ac {
+  align-items: center;
+}
+
+.flex-jc {
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pad {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+// Typography Styles
+
+.text--body {
+  font-family: $font-lato;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $black;
+  letter-spacing: 0.4px;
+}
+
+.text--h1 {
+  font-family: $font-plex;
+  font-size: 60px;
+  color: $mid-grey;
+  letter-spacing: 1.07px;
+  font-weight: 600;
+}
+
+.text--h3 {
+  font-family: $font-lato;
+  color: $black;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media (max-width: $smscreen) {
+  .pad {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .text--h1 {
+    font-size: 40px;
+  }
+  .text--h3 {
+    font-size: 32px;
+  }
+  .text--body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: $xsscreen) {
+  .text--h1 {
+    font-size: 36px;
+  }
+  .text--h3 {
+    font-size: 28px;
+  }
+  .text--body {
+    font-size: 18px;
+  }
+}
+
+.pad-left-0 {
+  @media (min-width: $mdscreen + 1px) {
+    padding-left: 0;
+  }
+}
+
+.underline-link {
+  color: $mid-grey;
+  text-decoration: underline;
+}

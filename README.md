@@ -19,7 +19,7 @@ This is a starter project to create a new Wordpress theme using Timber, SCSS, an
 1. [Install Docker](#installing-docker)
 1. `git clone git@github.com:Scout-NU/wordpress-timber-starter.git my-project`
 1. `cd my-project`
-1. `npm install`
+1. `yarn install`
 1. If using the rsync deploy script, update deploy destination and site url in [deploy.sh](/bin/desploy.sh)
 1. Search the entire project for `CHANGE_THIS`, you'll find places to change your MySQL password, database name, theme name, project name, and author name. Replace all of these with the relevant information.
 1. You should be all set!
@@ -59,9 +59,14 @@ We've got the theme building, but because it's not pure Wordpress/PHP we need to
 
 [Twig Docs](https://twig.symfony.com/doc/2.x/)
 
+Make sure you change your Wordpress' permalinks rules to `Post name`.
+
+* Navigate to `localhost:3000/wp-admin`
+* `Settings > Permalinks` change to `Post name`. This will ensure 404 handling using our templates.
+
 ## Development
 
-1. `npm start`
+1. `yarn start`
 1. 💸 money 💸
 
 ## Tips
@@ -77,7 +82,7 @@ wordpress-timber-starter
 │   gulpconfig.js  -- Defines all gulp paths & configurations used in
 │                     gulpfile.js directory
 │   package.json   -- Defines all the dependencies needed that are installed
-│                     using `npm install`
+│                     using `yarn install`
 │   docker-compose.yml   -- The Dockerfile to get the WP server up and running
 │
 └───gulpfile.js
@@ -108,11 +113,9 @@ wordpress-timber-starter
 
 ## Maintainers
 
-#### Adam Markon
+#### Joseph Wang
 
-_Email_: [amarkon895@gmail.com](mailto:amarkon895@gmail.com)
-
-_Twitter_: [@amarkon88](https://twitter.com/amarkon88)
+_Email_: [joewang96@gmail.com](mailto:joewang96@gmail.com)
 
 ## Code of Conduct
 

@@ -1,0 +1,6 @@
+.about--hero--content-wrapper {
+  & + .banner--img {
+    margin-top: 80px;
+    margin-bottom: 170px;
+  }
+}

@@ -1,9 +1,93 @@
-{% extends "base.twig" %}
+{% extends "base.twig" %} {% block content %}
+<section id="hero">
+  <div class="content-wrapper pad hero--wrapper">
+    <h1 class="text--h1 title">
+      {{ homePage.hero_title }}
+    </h1>
+    <p class="text--body body">
+      {{ homePage.hero_subtitle }}
+    </p>
+    <div class="cta-wrapper">
+      <a class="cta"
+        ><button class="btn">{{ homePage.scroll_cta_label }}</button></a
+      >
+      <a class="cta" href="/apply"
+        ><button class="btn ghost">{{ homePage.apply_cta_label }}</button></a
+      >
+    </div>
+  </div>
+</section>
 
-{% block content %}
-<div id="post-{{homePage.ID}}">
-  <section>
-    <div>{{homePage.content}}</div>
-  </section>
+<div class="hero-banner-img--wrapper pos-rel">
+  <img
+    class="banner--img"
+    src="{{ Image(homePage.hero_image).src }}"
+    alt="{{ Image(homePage.hero_image).alt }}"
+  />
+  <div class="img-caption">
+    {{ homePage.hero_image_label }}
+  </div>
 </div>
+
+<section id="about" class="pos-rel">
+  <div class="content-wrapper pad home--about--content-wrapper">
+    <h1 class="text--h1 title">
+      {{ homePage.about_section_title }}
+    </h1>
+    <p class="text--body body" style="white-space: pre-line;">
+      {{ homePage.about_section_body }}
+    </p>
+    <div class="cta-wrapper">
+      <a class="cta" href="/about-us"
+        ><button class="btn">{{ homePage.about_section_cta_label }}</button></a
+      >
+    </div>
+  </div>
+</section>
+
+<section id="purpose">
+  <div
+    class="content-wrapper split--content-wrapper home--purpose--content-wrapper pad pad-left-0 flex-parent"
+  >
+    <div class="img-wrapper">
+      <img
+        class="purpose-img img"
+        src="{{ Image(homePage.purpose_section_image).src }}"
+        alt="{{ Image(homePage.purpose_section_image).alt }}"
+      />
+    </div>
+    <div class="content">
+      <h1 class="text--h1 title">
+        {{ homePage.purpose_section_title }}
+      </h1>
+      <p class="text--body body" style="white-space: pre-line;">
+        {{ homePage.purpose_section_body }}
+      </p>
+      <div class="cta-wrapper">
+        <a class="cta" href="/apply"
+          ><button class="btn">
+            {{ homePage.purpose_section_cta_join }}
+          </button></a
+        >
+        <a class="cta" href="/about-us"
+          ><button class="btn ghost">
+            {{ homePage.purpose_section_cta_about }}
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sock--section home--sock--section pad flex-parent">
+  <div class="sock--wrapper">
+    <p class="text--h3 title">{{ homePage.sock_title }}</p>
+    <p class="text--body body">{{ homePage.sock_body }}</p>
+    <div class="cta-wrapper">
+      <a class="cta" href="{{ sock_cta_slug }}"
+        ><button class="btn">{{ homePage.sock_cta_label }}</button></a
+      >
+    </div>
+  </div>
+</section>
 {% endblock %}

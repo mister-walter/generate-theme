@@ -1,1 +1,27 @@
 // nav styles here
+
+.nav {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  .nav-wrapper {
+    justify-content: space-between;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  .nav-item {
+    color: $mid-grey;
+    font-family: $font-lato;
+    font-size: 20px;
+    letter-spacing: 0.71px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  @media (max-width: $mdscreen) {
+    display: none;
+  }
+}
