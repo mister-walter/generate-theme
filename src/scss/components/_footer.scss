@@ -65,27 +65,28 @@
     @media (max-width: $smscreen + 120px) {
       padding-top: 82px;
       padding-bottom: 82px;
-
-      .title,
-      .body {
-        text-align: left;
-      }
       .contact-form--wrapper {
-        .title {
-          font-size: 32px;
-        }
+        .title,
         .body {
-          font-size: 16px;
+          text-align: left;
         }
-      }
-      .form--content {
-        flex-direction: column;
-        .input--email {
-          margin-bottom: 20px;
-          width: 100%;
-          max-width: unset;
-          font-size: 16px;
-          // padding: 12px 18px;
+        .contact-form--wrapper {
+          .title {
+            font-size: 32px;
+          }
+          .body {
+            font-size: 16px;
+          }
+        }
+        .form--content {
+          flex-direction: column;
+          .input--email {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: unset;
+            font-size: 16px;
+            // padding: 12px 18px;
+          }
         }
       }
     }

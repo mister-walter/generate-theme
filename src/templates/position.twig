@@ -1,0 +1,22 @@
+{% extends "base.twig" %} {% block content %}
+<div class="position--content-wrapper pad">
+  <p class="position--breadcrumb text-center">
+    <a href="/apply">Applications</a> > {{ post.team }} Team
+  </p>
+  <h1 class="text--h1 title text-center">{{ post.title }}</h1>
+  <p class="subtitle text-center">{{ post.subtitle }}</p>
+  <div class="position--content">
+    {{ post.content }}
+  </div>
+  <div class="cta-wrapper">
+    <a
+      class="cta"
+      href="{{ post.application_link }}"
+      target="_blank"
+      rel="nofollow noopener noreferer"
+      ><button class="btn">Apply now</button></a
+    >
+  </div>
+</div>
+<!-- /content-wrapper -->
+{% endblock %}
