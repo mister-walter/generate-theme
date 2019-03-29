@@ -24,10 +24,59 @@ class ChangeThisClassName extends TimberSite {
 
   function register_post_types() {
     //this is where you can register custom post types
+    /* Team Member */
+		register_post_type( 'team_member',
+      array(
+        'labels' => array(
+          'name' => __( 'Team Members' ),
+          'singular_name' => __( 'Team Member' )
+          ),
+          'public' => true,
+          'has_archive' => false,
+          'show_in_rest' => true
+      )
+    );
+    /* Application (for position openings) */
+    register_post_type( 'position',
+      array(
+        'labels' => array(
+          'name' => __( 'Position' ),
+          'singular_name' => __( 'Position' )
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'show_in_rest' => true
+      )
+    );
   }
 
   function register_taxonomies() {
     //this is where you can register custom taxonomies
+    register_taxonomy('team-type', 'team_member', array(
+			'hierarchical' => true,
+			'show_ui' => true,
+			// This array of options controls the labels displayed in the WordPress Admin UI
+			'labels' => array(
+				'name' => _x( 'Team Type', 'taxonomy general name' ),
+				'singular_name' => _x( 'Team Type', 'taxonomy singular name' ),
+				'search_items' =>  __( 'Search Team Types' ),
+				'all_items' => __( 'All Team Types' ),
+				'parent_item' => __( 'Parent Team Type' ),
+				'parent_item_colon' => __( 'Parent Team Type:' ),
+				'edit_item' => __( 'Edit Team Type' ),
+				'update_item' => __( 'Update Team Type' ),
+				'add_new_item' => __( 'Add New Team Type' ),
+				'new_item_name' => __( 'New Team Type Name' ),
+				'menu_name' => __( 'Team Types' ),
+			),
+			// Control the slugs used for this taxonomy
+			'rewrite' => array(
+				'slug' => 'team-types', // This controls the base slug that will display before each term
+				'with_front' => false, // Don't display the category base before "/locations/"
+				'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+			)
+		));
+
   }
 
   function add_to_context( $context ) {

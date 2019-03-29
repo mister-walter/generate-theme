@@ -39,8 +39,8 @@
 
     <div class="application-listings">
       {% for team in post.meta('application_group') %}
-      <div class="team--group" id="{{ team.team.slug }}">
-        <p class="text--h2 team--title">{{ team.team }}</p>
+      <div class="team--group" id="{{ Term(team.team).slug }}">
+        <p class="text--h2 team--title">{{ Term(team.team).title }}</p>
         <p class="text--body team--body">{{ team.team_description }}</p>
         <div class="team--application-listing">
           {% for position in team.applications %}
