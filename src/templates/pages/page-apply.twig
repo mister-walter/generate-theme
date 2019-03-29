@@ -43,8 +43,8 @@
         <p class="text--h2 team--title">{{ team.team }}</p>
         <p class="text--body team--body">{{ team.team_description }}</p>
         <div class="team--application-listing">
+          {% for position in team.applications %}
           <div class="team--application-listing--item flex-parent flex-ac">
-            {% for position in team.applications %}
             <div class="text-content">
               <p class="text--h3 role--title">
                 {{ position.role_application.title }}
@@ -64,8 +64,8 @@
                 role="presentation"
               />
             </a>
-            {% endfor %}
           </div>
+          {% endfor %}
         </div>
       </div>
       {% endfor %}
