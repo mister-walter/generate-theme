@@ -1,1 +1,127 @@
+#apply-hero {
+  &::before {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    padding-top: 60vw;
+    background: url('./images/yellow_slant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px bottom;
+    transform: scaleX(-1);
+  }
+}
 
+.apply--hero--content-wrapper.content-wrapper {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
+  position: relative;
+  padding-bottom: 76px;
+}
+
+.apply--applications--content-wrapper {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
+  .heading-content {
+    margin-bottom: 104px;
+    .title {
+      margin-bottom: 22px;
+    }
+    .info {
+      color: $info-grey;
+      font-style: italic;
+      font-size: 28px;
+      line-height: 1.21;
+    }
+  }
+
+  .application-listings {
+    .team--group {
+      margin-bottom: 76px;
+      .team--title {
+        margin-bottom: 39px;
+      }
+      .team--body {
+        -webkit-font-smoothing: antialiased;
+        margin-bottom: 53px;
+      }
+      .team--application-listing {
+        .team--application-listing--item {
+          justify-content: space-between;
+          padding: 16px 60px;
+          border-bottom: 3px solid #ebebeb;
+
+          @media (max-width: $mdscreen) {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+          &:first-child {
+            border-top: 3px solid #ebebeb;
+          }
+          .role--title {
+            margin-bottom: 12px;
+            font-size: 36px;
+            letter-spacing: 1.01px;
+            -webkit-font-smoothing: antialiased;
+          }
+          .role--subtitle {
+            color: $info-grey;
+          }
+          .role--link {
+            font-size: 18px;
+            .text {
+              margin-right: 16px;
+              padding-bottom: 2px;
+            }
+            .arrow {
+              transition: transform 150ms ease-out;
+            }
+            &:hover {
+              .arrow {
+                transform: translateX(4px);
+              }
+            }
+          }
+          @media (max-width: $mdscreen) {
+            .role--title {
+              font-size: 28px;
+            }
+            .role--subtitle {
+              font-size: 20px;
+            }
+          }
+          @media (max-width: $smscreen) {
+            flex-direction: column;
+            padding-left: 12px;
+            padding-right: 12px;
+            align-items: flex-start;
+
+            .role--title {
+              font-size: 24px;
+              margin-bottom: 8px;
+            }
+            .role--subtitle {
+              font-size: 16px;
+            }
+            .text-content {
+              margin-bottom: 12px;
+            }
+            .role--link .text {
+              margin-right: 8px;
+            }
+            .arrow {
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

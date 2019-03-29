@@ -1,22 +1,75 @@
 {% extends "base.twig" %} {% block content %}
-<section id="apply-hero">
-  <div class="content-wrapper pad">
-    <h1 class="text--h1 title">
-      {{ post.hero_title }}
-    </h1>
-    <p class="text--body body">
-      {{ post.hero_body }}
-    </p>
-    <div class="cta-wrapper">
-      <a class="cta"
-        ><button class="btn">{{ post.hero_cta_label }}</button></a
-      >
+
+<section id="apply-hero" class="pos-rel">
+  <div
+    class="content-wrapper apply--hero--content-wrapper split--content-wrapper img-left pad flex-parent"
+  >
+    <div class="content">
+      <h1 class="text--h1 title">
+        {{ post.hero_title }}
+      </h1>
+      <p class="text--body body" style="white-space: pre-line;">
+        {{ post.hero_body }}
+      </p>
+      <div class="cta-wrapper">
+        <a class="cta"
+          ><button class="btn">{{ post.hero_cta_label }}</button></a
+        >
+      </div>
     </div>
-    <img
-      class="hero-img"
-      src="{{ Image(post.hero_image).src }}"
-      alt="{{ Image(post.hero_image).alt }}"
-    />
+
+    <div class="img-wrapper">
+      <img
+        class="purpose-img img"
+        src="{{ Image(post.hero_image).src }}"
+        alt="{{ Image(post.hero_image).alt }}"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="apply--applications--section">
+  <div class="apply--applications--content-wrapper pad">
+    <div class="heading-content">
+      <h2 class="text--h1 text-center title">{{ post.applications_title }}</h2>
+      <p class="text--body text-center info">
+        {{ post.application_details_text }}
+      </p>
+    </div>
+
+    <div class="application-listings">
+      {% for team in post.meta('application_group') %}
+      <div class="team--group" id="{{ team.team.slug }}">
+        <p class="text--h2 team--title">{{ team.team }}</p>
+        <p class="text--body team--body">{{ team.team_description }}</p>
+        <div class="team--application-listing">
+          <div class="team--application-listing--item flex-parent flex-ac">
+            {% for position in team.applications %}
+            <div class="text-content">
+              <p class="text--h3 role--title">
+                {{ position.role_application.title }}
+              </p>
+              <p class="text--body role--subtitle">
+                {{ position.role_application.subtitle }}
+              </p>
+            </div>
+            <a
+              class="role--link text--body flex-parent flex-ac flex-jc"
+              href="{{ position.role_application.link }}"
+            >
+              <span class="link-blue text">Apply</span>
+              <img
+                class="arrow"
+                src="{{ theme.link }}/images/apply_arrow.svg"
+                role="presentation"
+              />
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 {% endblock %}

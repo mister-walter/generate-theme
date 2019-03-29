@@ -26,6 +26,18 @@
       }
     }
   }
+  &.img-left {
+    .img-wrapper {
+      margin-left: 100px;
+      margin-right: 0;
+      @media (max-width: $mdscreen) {
+        margin-left: 0;
+      }
+    }
+    @media (max-width: $mdscreen) {
+      flex-direction: column;
+    }
+  }
   .content {
     max-width: 660px;
   }

@@ -4,3 +4,21 @@
     margin-bottom: 170px;
   }
 }
+
+#mission {
+  &::before {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    top: -171px;
+    width: 100%;
+    right: 0;
+    max-width: 1100px;
+    padding-top: 60vw;
+    background: url('./images/yellow_slant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px bottom;
+    transform: scale(-1 -1);
+  }
+}
