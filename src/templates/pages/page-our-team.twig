@@ -40,4 +40,16 @@
     {% endfor %}
   </div>
 </section>
+
+<section class="sock--section home--sock--section pad flex-parent">
+  <div class="sock--wrapper">
+    <p class="text--h3 title">{{ post.sock_title }}</p>
+    <p class="text--body body">{{ post.sock_body }}</p>
+    <div class="cta-wrapper">
+      <a class="cta" href="{{ post.sock_cta_link_slug }}"
+        ><button class="btn">{{ post.sock_cta_label }}</button></a
+      >
+    </div>
+  </div>
+</section>
 {% endblock %}
