@@ -29,4 +29,15 @@
 
 .cta-wrapper {
   margin-top: 60px;
+
+  @media (max-width: $smscreen) {
+    flex-direction: column;
+    .cta .btn {
+      margin-bottom: 20px;
+    }
+    .btn.ghost {
+      padding: 16px 12px;
+      text-align: left;
+    }
+  }
 }

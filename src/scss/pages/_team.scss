@@ -34,8 +34,10 @@
         font-weight: 400;
         margin-bottom: 20px;
       }
-      &:first-child .subteam--title {
-        margin-top: -15px;
+      &:first-of-type {
+        .subteam--title {
+          margin-top: -15px;
+        }
       }
 
       .subteam--members {

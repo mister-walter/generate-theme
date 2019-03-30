@@ -4,7 +4,9 @@
   margin-right: auto;
   .img-wrapper {
     flex-grow: 1;
-    max-width: 460px;
+    @media (min-width: $smscreen + 1px) {
+      max-width: 460px;
+    }
     .img {
       width: 100%;
     }
@@ -50,9 +52,13 @@
       align-items: center;
       .img-wrapper {
         margin-top: 60px;
-        max-width: 400px;
         width: 100%;
       }
+    }
+  }
+  @media (max-width: $mdscreen) {
+    .content {
+      max-width: unset;
     }
   }
 }

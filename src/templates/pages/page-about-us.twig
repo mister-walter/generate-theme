@@ -60,4 +60,38 @@
   </div>
 </section>
 
+<section id="about--team-roster">
+  <div class="heading-content pad">
+    <h2 class="text--h1 text-center title">{{ post.teams_section_title }}</h2>
+  </div>
+
+  {% for team in post.meta('teams_list') %}
+  <div
+    class="content-wrapper split--content-wrapper about--teams--content-wrapper pad pad-right-0 flex-parent img-left"
+  >
+    <div class="content">
+      <h1 class="text--h2 title">
+        {{ Term(team.team).title }}
+      </h1>
+      <p class="text--body body" style="white-space: pre-line;">
+        {{ team.body_text }}
+      </p>
+      <div class="cta-wrapper">
+        <a class="cta" href="/apply#{{ Term(team.team).slug }}"
+          ><button class="btn">
+            Apply now
+          </button></a
+        >
+      </div>
+    </div>
+
+    <div
+      class="img-wrapper"
+      style="background-image: url('{{ Image(team.image).src }}')"
+      title="{{ Image(team.image).alt }}"
+    ></div>
+  </div>
+  {% endfor %}
+</section>
+
 {% endblock %}

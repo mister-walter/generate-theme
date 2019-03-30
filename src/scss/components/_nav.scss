@@ -8,6 +8,9 @@
   }
   @media (max-width: $smscreen) {
     padding-bottom: 64px;
+    .logo {
+      width: 180px;
+    }
   }
 }
 

@@ -2,6 +2,11 @@
   & + .banner--img {
     margin-top: 80px;
     margin-bottom: 170px;
+
+    @media (max-width: $smscreen) {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -20,5 +25,37 @@
     background-repeat: no-repeat;
     background-position: 0px bottom;
     transform: scale(-1 -1);
+    @media (max-width: $smscreen) {
+      top: -61px;
+      background-size: 100%;
+    }
+  }
+}
+
+#about--team-roster {
+  .heading-content {
+    .title {
+      margin-bottom: 105px;
+      @media (max-width: $mdscreen) {
+        text-align: left;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+.about--teams--content-wrapper {
+  .img-wrapper {
+    width: 520px;
+    position: relative;
+    height: 411px;
+    background-size: cover;
+    background-position: center top;
+    @media (max-width: $mdscreen) {
+      width: 100%;
+    }
+    @media (max-width: $smscreen) {
+      height: 90vw;
+    }
   }
 }

@@ -65,7 +65,7 @@ a {
 .text--h1 {
   font-family: $font-plex;
   font-size: 60px;
-  color: $mid-grey;
+  color: $black;
   letter-spacing: 1.07px;
   font-weight: 600;
 }
@@ -73,7 +73,7 @@ a {
 .text--h2 {
   font-family: $font-plex;
   font-size: 36px;
-  color: $black;
+  color: $mid-grey;
   line-height: 1.3;
   font-weight: 600;
 }
@@ -103,8 +103,15 @@ a {
 }
 
 @media (max-width: $xsscreen) {
+  .pad {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .text--h1 {
     font-size: 36px;
+  }
+  .text--h2 {
+    font-size: 32px;
   }
   .text--h3 {
     font-size: 28px;
@@ -117,6 +124,11 @@ a {
 .pad-left-0 {
   @media (min-width: $mdscreen + 1px) {
     padding-left: 0;
+  }
+}
+.pad-right-0 {
+  @media (min-width: $mdscreen + 1px) {
+    padding-right: 0;
   }
 }
 

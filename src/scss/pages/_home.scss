@@ -32,6 +32,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: -1px bottom;
+    @media (max-width: $smscreen) {
+      bottom: -80px;
+    }
   }
 }
 
@@ -64,6 +67,10 @@
     font-size: 20px;
     letter-spacing: 0.7px;
   }
+  @media (max-width: $smscreen) {
+    margin-top: 80px;
+    margin-bottom: 120px;
+  }
 }
 
 .home--about--content-wrapper {
@@ -94,6 +101,10 @@
     background-repeat: no-repeat;
     background-position: 1px bottom;
     transform: scaleY(-1);
+
+    @media (max-width: $smscreen) {
+      top: -121px;
+    }
   }
 }
 
