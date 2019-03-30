@@ -1,9 +1,43 @@
 {% extends "base.twig" %} {% block content %}
-<section id="team-hero">
+<section id="team-hero" class="teams--hero--section">
   <div class="content-wrapper pad">
     <h1 class="text--h1 title">
       The team behind Generate
     </h1>
+  </div>
+</section>
+<section class="teams--team-listings pos-rel">
+  <div class="content-wrapper pad">
+    {% for team in post.meta('teams') %}
+    <div class="team--group">
+      <p class="text--h2 team--title">{{ Term(team.title).title }}</p>
+      {% for group in team.subgroups %}
+      <div class="team-listings--subgroup--wrapper">
+        {% if group.title %}
+        <p class="text--h3 subteam--title">{{ group.title }}</p>
+        {% endif %}
+        <div class="subteam--members flex-parent pos-rel">
+          {% for member in group.members %}
+          <div class="subteam--member--item">
+            <div
+              class="member--headshot"
+              style="background-image: url('{{
+                Image(Post(member.member).headshot).src
+              }}');"
+            ></div>
+            <p class="text--body member--position">
+              {{ Post(member.member).role_title }}
+            </p>
+            <p class="text--body member--name">
+              {{ Post(member.member).name }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
   </div>
 </section>
 {% endblock %}

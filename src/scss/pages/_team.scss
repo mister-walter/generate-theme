@@ -1,1 +1,76 @@
+.teams--hero--section {
+  padding-bottom: 80px;
+}
 
+.teams--team-listings {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &::before {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    top: -33vw;
+    width: 100%;
+    right: 0;
+    padding-bottom: 60vw;
+    background: url('./images/yellow_slant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -1px top;
+    transform: rotate(180deg);
+  }
+
+  .team--group {
+    margin-bottom: 82px;
+    .team--title {
+      font-size: 40px;
+      margin-bottom: 38px;
+    }
+    .team-listings--subgroup--wrapper {
+      margin-bottom: 40px;
+      .subteam--title {
+        font-family: $font-plex;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+      &:first-child .subteam--title {
+        margin-top: -15px;
+      }
+
+      .subteam--members {
+        align-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -54px;
+
+        .subteam--member--item {
+          width: 25%;
+          padding: 0 20px;
+          margin-bottom: 54px;
+          .member--headshot {
+            width: 100%;
+            padding-bottom: 100%;
+            margin-bottom: 11px;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+          }
+          .member--position {
+            font-family: $font-plex;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            line-height: 1.27;
+            margin-bottom: 6px;
+          }
+          .member--name {
+            font-size: 16px;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
