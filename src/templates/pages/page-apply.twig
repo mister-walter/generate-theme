@@ -49,9 +49,11 @@
               <p class="text--h3 role--title">
                 {{ position.role_application.title }}
               </p>
+              {% if position.role_application.subtitle %}
               <p class="text--body role--subtitle">
                 {{ position.role_application.subtitle }}
               </p>
+              {% endif %}
             </div>
             <a
               class="role--link text--body flex-parent flex-ac flex-jc"

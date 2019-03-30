@@ -10,7 +10,7 @@
     background: url('./images/yellow_slant.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0px bottom;
+    background-position: -1px bottom;
     transform: scaleX(-1);
   }
 }
@@ -62,6 +62,12 @@
           padding: 16px 60px;
           border-bottom: 3px solid #ebebeb;
 
+          .text-content {
+            @media (min-width: $smscreen + 1px) {
+              margin-right: 30px;
+            }
+          }
+
           @media (max-width: $mdscreen) {
             padding-left: 30px;
             padding-right: 30px;
@@ -70,12 +76,12 @@
             border-top: 3px solid #ebebeb;
           }
           .role--title {
-            margin-bottom: 12px;
             font-size: 36px;
             letter-spacing: 1.01px;
             -webkit-font-smoothing: antialiased;
           }
           .role--subtitle {
+            margin-top: 12px;
             color: $info-grey;
           }
           .role--link {
@@ -87,7 +93,8 @@
             .arrow {
               transition: transform 150ms ease-out;
             }
-            &:hover {
+            &:hover,
+            &:focus {
               .arrow {
                 transform: translateX(4px);
               }
@@ -109,10 +116,10 @@
 
             .role--title {
               font-size: 24px;
-              margin-bottom: 8px;
             }
             .role--subtitle {
               font-size: 16px;
+              margin-top: 8px;
             }
             .text-content {
               margin-bottom: 12px;
