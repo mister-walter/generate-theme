@@ -86,12 +86,34 @@
     </div>
 
     <div
-      class="img-wrapper"
+      class="img-wrapper hide-md"
       style="background-image: url('{{ Image(team.image).src }}')"
       title="{{ Image(team.image).alt }}"
     ></div>
   </div>
   {% endfor %}
+</section>
+
+<section id="about--employers" class="about--employer--section">
+  <div class="heading-content pad flex-parent flex-col">
+    <h2 class="text--h1 title">
+      {{ post.employer_section_title }}
+    </h2>
+    <p class="text--body body">{{ post.employer_section_body }}</p>
+  </div>
+
+  <div class="employer--section--carousel">
+    <div class="employer--section--carousel-wrapper flex-parent flex-ac">
+      {% for logo in post.meta('logo_list') %}
+      <img
+        class="employer--logo"
+        src="{{ Image(logo.logo).src }}"
+        alt="{{ Image(logo.logo).alt }}"
+        title="{{ Image(logo.logo).title }}"
+      />
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 {% endblock %}

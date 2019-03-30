@@ -111,6 +111,11 @@
           font-size: 20px;
           letter-spacing: 0.71px;
           color: $mid-grey;
+          transition: color 250ms ease-in-out;
+          &:hover,
+          &:focus {
+            color: $black;
+          }
 
           &:not(:last-child) {
             margin-right: 25px;
@@ -180,6 +185,9 @@
             &.twitter,
             &.instagram {
               width: 22px;
+            }
+            &.gmail {
+              width: 24px;
             }
           }
         }

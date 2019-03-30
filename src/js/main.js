@@ -23,4 +23,48 @@ $(function() {
       800
     );
   });
+
+  let offset = 0;
+
+  function autoLogos() {
+    offset -= 1;
+    document.querySelector(
+      '.employer--section--carousel .employer--section--carousel-wrapper'
+    ).style.transform = `translateX(${offset}px`;
+    if (
+      document.querySelector(
+        '.employer--section--carousel .employer--section--carousel-wrapper .employer--logo'
+      ).offsetWidth <
+      -1 * offset
+    ) {
+      // Add to end
+      document
+        .querySelector(
+          '.employer--section--carousel .employer--section--carousel-wrapper'
+        )
+        .appendChild(
+          document.querySelector(
+            '.employer--section--carousel .employer--section--carousel-wrapper .employer--logo'
+          )
+        );
+      // Fix up offsets
+      let marR = getComputedStyle(
+        document.querySelector('.employer--logo')
+      ).getPropertyValue('margin-right');
+      offset = parseInt(marR);
+      document.querySelector(
+        '.employer--section--carousel .employer--section--carousel-wrapper'
+      ).style.transform = `translateX(${offset}px`;
+    }
+  }
+
+  $(document).ready(function() {
+    if (
+      document.querySelector(
+        '.employer--section--carousel .employer--section--carousel-wrapper'
+      )
+    ) {
+      let interval = setInterval(autoLogos, 12.5);
+    }
+  });
 });

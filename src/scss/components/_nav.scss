@@ -22,6 +22,11 @@
     font-family: $font-lato;
     font-size: 20px;
     letter-spacing: 0.71px;
+    transition: color 250ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: $black;
+    }
 
     &:not(:last-child) {
       margin-right: 25px;
