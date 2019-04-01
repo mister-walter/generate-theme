@@ -10,6 +10,7 @@
     {{ post.content }}
   </div>
   <div class="cta-wrapper">
+    {% if post.application_link %}
     <a
       class="cta"
       href="{{ post.application_link }}"
@@ -17,6 +18,7 @@
       rel="nofollow noopener noreferer"
       ><button class="btn">Apply now</button></a
     >
+    {% endif %}
   </div>
 </div>
 <!-- /content-wrapper -->
