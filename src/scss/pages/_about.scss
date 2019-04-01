@@ -1,3 +1,35 @@
+#about-hero {
+  position: relative;
+  &::before,
+  &::after {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    background-image: radial-gradient($blue $dot-size, transparent 0),
+      radial-gradient($blue $dot-size, transparent 0);
+    background-size: $dot-space $dot-space;
+    opacity: 0.2;
+    height: 120px;
+  }
+  // top left
+  &::before {
+    width: 70%;
+    max-width: 340px;
+    top: -50px;
+    left: 0;
+  }
+  // bottom right
+  &::after {
+    width: 70%;
+    max-width: 460px;
+    top: 50px;
+    right: 0;
+    @media (max-width: $mdscreen) {
+      content: none;
+    }
+  }
+}
+
 .about--hero--content-wrapper {
   & + .banner--img {
     margin-top: 80px;

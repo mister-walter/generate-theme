@@ -146,14 +146,20 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      .about-snippet {
-        color: $light-grey;
-        font-family: $font-lato;
-        font-size: 12px;
+      .about-sherman {
         max-width: 318px;
-        line-height: 1.416;
+        .sherm-logo {
+          width: 100%;
+          max-width: 240px;
+          margin-top: 16px;
+        }
+        .about-snippet {
+          color: $light-grey;
+          font-family: $font-lato;
+          font-size: 12px;
+          line-height: 1.416;
+        }
       }
-
       .social-wrapper {
         display: flex;
         .social-item {
@@ -194,8 +200,13 @@
       }
       @media (max-width: $mdscreen) {
         flex-direction: column;
-        .about-snippet {
-          margin-bottom: 20px;
+        .about-sherman {
+          margin-bottom: 32px;
+        }
+        .social-wrapper .social-item {
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
         }
       }
     }

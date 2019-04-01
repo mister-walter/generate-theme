@@ -5,43 +5,21 @@
       <a class="home-logo" href="/"
         ><img class="logo" src="{{ theme.link }}/images/logo-small.svg"
       /></a>
-      <ul class="nav-list">
+      <ul class="nav-list hide-md">
         <li class="nav-item"><a href="/about-us">About Us</a></li>
         <li class="nav-item"><a href="/our-team">Our Team</a></li>
-        <li class="nav-item"><a href="/projects">Our Clients</a></li>
+        <!-- <li class="nav-item"><a href="/clients">Our Clients</a></li> -->
         <li class="nav-item"><a href="/apply">How to Apply</a></li>
       </ul>
+      <div
+        class="mobile-nav--indicator pos-rel show-md flex-parent flex-col"
+        tabindex="0"
+      >
+        <span class="mobile-nav--indicator--lines"></span>
+        <span class="mobile-nav--indicator--lines"></span>
+        <span class="mobile-nav--indicator--lines"></span>
+      </div>
     </div>
   </nav>
-  <!-- <nav class="nav" role="navigation">
-    <div class="nav__home">
-      <a class="" href="/" rel="home">{{ site.name }}</a>
-    </div>
-    <ul class="nav__menu">
-      {% for item in topNav.get_items %}
-      <li class="nav__menu__item">
-        <a
-          class="nav__menu__link {{ item.current ? 'active' : '' }}"
-          href="{{ item.get_link }}"
-        >
-          <span>{{ item.title }}</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav> -->
-  <!-- <div class="nav__mobile">
-    <img class="lines top" src="{{site.theme.link}}/images/mobile_menu/lines/lines_top.png" alt="lines">
-    <ul>
-      {% for item in mobileNav.get_items %}
-      <li class="nav__menu__item">
-        <a class="nav__menu__link {{ item.current ? 'active' : '' }}" href="{{item.get_link}}">
-          <span>{{item.title}}</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-    <img class="lines bottom" src="{{site.theme.link}}/images/mobile_menu/lines/lines_bottom.png" alt="lines">
-  </div> -->
   {% endblock %}
 </header>

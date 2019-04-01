@@ -88,7 +88,12 @@ a {
 
 @media (max-width: $mdscreen) {
   .hide-md {
-    display: none;
+    display: none !important;
+  }
+}
+@media (min-width: $mdscreen + 1px) {
+  .show-md {
+    display: none !important;
   }
 }
 
@@ -141,6 +146,14 @@ a {
 .underline-link {
   color: $mid-grey;
   text-decoration: underline;
+
+  &.hover-blue {
+    transition: color 250ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
 }
 
 .link-blue {

@@ -8,41 +8,98 @@
         Stay in touch with Generate by signing up for our newsletter. We'll
         update you on important dates, events, and other cool stuff we find.
       </p>
-      <div class="form--content flex-parent flex-jc">
+      <form
+        action="//northeastern.us14.list-manage.com/subscribe/post?u=b68280c2338757ed7ae96dd7f&amp;id=8d1b04b5ee"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate form--content flex-parent flex-jc"
+        target="_blank"
+        novalidate="novalidate"
+        style="width: 100%;"
+      >
         <input
           class="input--email"
           type="email"
+          value=""
+          name="EMAIL"
+          class="required email"
+          id="mce-EMAIL"
+          aria-required="true"
           aria-label="Enter your email"
           placeholder="Enter your email"
         />
-        <button class="btn submit-btn">Sign up!</button>
-      </div>
+
+        <div id="mce-responses">
+          <div
+            class="response"
+            id="mce-error-response"
+            style="display:none"
+          ></div>
+          <div
+            class="response"
+            id="mce-success-response"
+            style="display:none"
+          ></div>
+        </div>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input
+            type="text"
+            name="b_b68280c2338757ed7ae96dd7f_8d1b04b5ee"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+        <input
+          class="btn submit-btn"
+          type="submit"
+          value="Sign up!"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+        />
+      </form>
     </div>
   </section>
   <section class="footer-wrapper pad">
     <div class="logo-sitemap">
-      <img class="logo" src="{{ theme.link }}/images/logo.svg" />
+      <a href="/">
+        <img class="logo" src="{{ theme.link }}/images/logo.svg" />
+      </a>
       <div class="sitemap">
         <a class="sitemap-item" href="/">Home</a>
         <a class="sitemap-item" href="/about-us">About Us</a>
         <a class="sitemap-item" href="/our-team">Our Team</a>
-        <a class="sitemap-item" href="/projects">Our Clients</a>
+        <!-- <a class="sitemap-item" href="/clients">Our Clients</a> -->
         <a class="sitemap-item" href="/apply">How to Apply</a>
       </div>
     </div>
     <div class="about-social">
-      <p class="about-snippet">
-        Generate is Northeastern’s student led design studio aimed at fostering
-        entreprenurial engineering on campus. Generate’s office is located in
-        the
+      <div class="about-sherman flex-parent flex-col pos-rel">
+        <p class="about-snippet">
+          Generate is Northeastern’s student led design studio aimed at
+          fostering entreprenurial engineering on campus. Generate’s office is
+          located in the
+          <a
+            href="https://neu.edu/sherman"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline-link hover-blue"
+            >Sherman Center</a
+          >, found in 008C Hayden Hall.
+        </p>
         <a
           href="https://neu.edu/sherman"
           target="_blank"
           rel="noopener noreferrer"
-          class="underline-link"
-          >Sherman Center</a
-        >, found in 008C Hayden Hall.
-      </p>
+        >
+          <img
+            class="sherm-logo"
+            src="{{ theme.link }}/images/sherman.png"
+            alt="Northeastern University: Michael J. and Ann Sherman Center for Engineering Entrepreneurship Education"
+          />
+        </a>
+      </div>
       <div class="social-wrapper">
         <a
           href="https://facebook.com/generateNU"

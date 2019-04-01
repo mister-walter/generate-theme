@@ -24,6 +24,10 @@ $(function() {
     );
   });
 
+  $('.nav .mobile-nav--indicator').click(function() {
+    $('.nav .mobile-nav--indicator').toggleClass('active');
+  });
+
   let offset = 0;
 
   function autoLogos() {
@@ -64,7 +68,7 @@ $(function() {
         '.employer--section--carousel .employer--section--carousel-wrapper'
       )
     ) {
-      let interval = setInterval(autoLogos, 12.5);
+      let interval = setInterval(autoLogos, 20);
     }
   });
 });

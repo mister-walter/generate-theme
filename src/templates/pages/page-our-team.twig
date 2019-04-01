@@ -21,9 +21,12 @@
           <div class="subteam--member--item">
             <div
               class="member--headshot"
-              style="background-image: url('{{
-                Image(Post(member.member).headshot).src
-              }}');"
+              style="background-image: url(
+              {% if Post(member.member).headshot %}
+              {{ Image(Post(member.member).headshot).src }}
+              {% else %}
+              {{ theme.link }}/images/default_headshot.jpg
+              {% endif %});"
             ></div>
             <p class="text--body member--position">
               {{ Post(member.member).role_title }}
