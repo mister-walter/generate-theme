@@ -9,6 +9,12 @@
     }
     .img {
       width: 100%;
+      &.img-background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding-bottom: 110%;
+      }
     }
   }
   &:not(.reverse) {

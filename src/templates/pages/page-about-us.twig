@@ -16,11 +16,13 @@
 <section id="mission" class="pos-rel">
   <div class="content-wrapper split--content-wrapper reverse pad flex-parent">
     <div class="img-wrapper">
-      <img
-        class="purpose-img img"
-        src="{{ Image(post.mission_section_image).src }}"
-        alt="{{ Image(post.mission_section_image).alt }}"
-      />
+      <div
+        class="purpose-img img img-background"
+        style="background-image: url({{
+          Image(post.mission_section_image).src
+        }});"
+        aria-label="{{ Image(post.mission_section_image).alt }}"
+      /></div>
     </div>
     <div class="content">
       <h1 class="text--h1 title">
@@ -36,11 +38,13 @@
 <section id="members">
   <div class="content-wrapper split--content-wrapper pad flex-parent">
     <div class="img-wrapper">
-      <img
-        class="purpose-img img"
-        src="{{ Image(post.member_section_image).src }}"
-        alt="{{ Image(post.member_section_image).alt }}"
-      />
+      <div
+        class="purpose-img img img-background"
+        style="background-image: url({{
+          Image(post.member_section_image).src
+        }});"
+        aria-label="{{ Image(post.member_section_image).alt }}"
+      ></div>
     </div>
     <div class="content">
       <h1 class="text--h1 title">

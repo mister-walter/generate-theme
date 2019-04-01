@@ -26,6 +26,7 @@ $(function() {
 
   $('.nav .mobile-nav--indicator').click(function() {
     $('.nav .mobile-nav--indicator').toggleClass('active');
+    $('.nav .mobile--navigation').toggleClass('active');
   });
 
   let offset = 0;

@@ -1,7 +1,10 @@
 // nav styles here
+$nav--padding-top: 64px;
+$mobile-nav--line--width: 36px;
+$mobile--nav--pad: 20px;
 
 .nav {
-  padding-top: 64px;
+  padding-top: $nav--padding-top;
   padding-bottom: 112px;
   .nav-wrapper {
     justify-content: space-between;
@@ -10,6 +13,66 @@
     padding-bottom: 64px;
     .logo {
       width: 180px;
+    }
+  }
+
+  .mobile--navigation {
+    transform: translateY(-16px);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    position: absolute;
+    top: - $mobile--nav--pad;
+    right: -$mobile--nav--pad;
+    background-color: $light-yellow;
+    overflow: hidden;
+    width: 100vw;
+    max-width: 260px;
+    &::before {
+      background-image: url('./images/curved_pattern.svg');
+      background-position: top left;
+      background-size: cover;
+      background-repeat: no-repeat;
+      content: ' ';
+      position: absolute;
+      top: -30px;
+      right: -20px;
+      width: 150%;
+      height: 100%;
+      z-index: -1;
+      transform: scale(-1 -1);
+    }
+    border-radius: 4px;
+    padding-top: $mobile--nav--pad / 2 + $mobile-nav--line--width;
+    padding-bottom: 20px;
+    padding-right: $mobile-nav--line--width + $mobile--nav--pad;
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+      width: 100%;
+      .nav-item {
+        margin: 0;
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    transition-timing-function: ease-out;
+    transition: 350ms;
+    transition-property: opacity transform;
+    &.active {
+      transform: translateY(0px);
+      opacity: 1;
+      pointer-events: all;
+    }
+    @media (max-width: $smscreen) {
+      right: -$mobile--nav--pad / 2;
+      top: -($mobile-nav--line--width) + $mobile--nav--pad / 2;
+      width: 80vw;
+      max-width: 260px;
     }
   }
 }
@@ -37,8 +100,9 @@
 $transition-speed: 150ms;
 
 .mobile-nav--indicator {
+  z-index: 1000;
   cursor: pointer;
-  width: 36px;
+  width: $mobile-nav--line--width;
   height: 24px;
   justify-content: space-between;
   transition: transform $transition-speed ease-in;
