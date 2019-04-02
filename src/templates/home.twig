@@ -11,7 +11,7 @@
       <a class="cta"
         ><button class="btn">{{ homePage.scroll_cta_label }}</button></a
       >
-      <a class="cta" href="/apply"
+      <a class="cta" href="{{ site.link }}/apply"
         ><button class="btn ghost">{{ homePage.apply_cta_label }}</button></a
       >
     </div>
@@ -38,7 +38,7 @@
       {{ homePage.about_section_body }}
     </p>
     <div class="cta-wrapper">
-      <a class="cta" href="/about-us"
+      <a class="cta" href="{{ site.link }}/about-us"
         ><button class="btn">{{ homePage.about_section_cta_label }}</button></a
       >
     </div>
@@ -64,12 +64,12 @@
         {{ homePage.purpose_section_body }}
       </p>
       <div class="cta-wrapper">
-        <a class="cta" href="/apply"
+        <a class="cta" href="{{ site.link }}/apply"
           ><button class="btn">
             {{ homePage.purpose_section_cta_join }}
           </button></a
         >
-        <a class="cta" href="/about-us"
+        <a class="cta" href="{{ site.link }}/about-us"
           ><button class="btn ghost">
             {{ homePage.purpose_section_cta_about }}
           </button></a
