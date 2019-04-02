@@ -54,7 +54,7 @@
         {{ post.members_section_body }}
       </p>
       <div class="cta-wrapper">
-        <a class="cta" href="/apply"
+        <a class="cta" href="{{ site.link }}/apply"
           ><button class="btn">
             {{ post.members_section_cta_label }}
           </button></a
@@ -81,7 +81,7 @@
         {{ team.body_text }}
       </p>
       <div class="cta-wrapper">
-        <a class="cta" href="/apply#{{ Term(team.team).slug }}"
+        <a class="cta" href="{{ site.link }}/apply#{{ Term(team.team).slug }}"
           ><button class="btn">
             Apply now
           </button></a

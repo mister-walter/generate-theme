@@ -2,14 +2,20 @@
   {% block header %}
   <nav class="nav pad" role="navigation">
     <div class="nav-wrapper flex-parent flex-ac">
-      <a class="home-logo" href="/"
+      <a class="home-logo" href="{{ site.link }}/"
         ><img class="logo" src="{{ theme.link }}/images/logo-small.svg"
       /></a>
       <ul class="nav-list hide-md">
-        <li class="nav-item"><a href="/about-us">About Us</a></li>
-        <li class="nav-item"><a href="/our-team">Our Team</a></li>
-        <!-- <li class="nav-item"><a href="/clients">Our Clients</a></li> -->
-        <li class="nav-item"><a href="/apply">How to Apply</a></li>
+        <li class="nav-item">
+          <a href="{{ site.link }}/about-us">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ site.link }}/our-team">Our Team</a>
+        </li>
+        <!-- <li class="nav-item"><a href="{{ site.link }}/clients">Our Clients</a></li> -->
+        <li class="nav-item">
+          <a href="{{ site.link }}/apply">How to Apply</a>
+        </li>
       </ul>
       <div class="mobile--nav--wrapper pos-rel show-md">
         <div
@@ -22,11 +28,17 @@
         </div>
         <div class="mobile--navigation">
           <ul class="nav-list">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/about-us">About Us</a></li>
-            <li class="nav-item"><a href="/our-team">Our Team</a></li>
-            <!-- <li class="nav-item"><a href="/clients">Our Clients</a></li> -->
-            <li class="nav-item"><a href="/apply">How to Apply</a></li>
+            <li class="nav-item"><a href="{{ site.link }}/">Home</a></li>
+            <li class="nav-item">
+              <a href="{{ site.link }}/about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.link }}/our-team">Our Team</a>
+            </li>
+            <!-- <li class="nav-item"><a href="{{ site.link }}/clients">Our Clients</a></li> -->
+            <li class="nav-item">
+              <a href="{{ site.link }}/apply">How to Apply</a>
+            </li>
           </ul>
         </div>
       </div>

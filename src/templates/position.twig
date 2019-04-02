@@ -1,8 +1,10 @@
 {% extends "base.twig" %} {% block content %}
 <div class="position--content-wrapper pad">
   <p class="position--breadcrumb text-center">
-    <a href="/apply">Applications</a> >
-    <a href="/apply#{{ Term(post.team).slug }}">{{ Term(post.team).title }}</a>
+    <a href="{{ site.link }}/apply">Applications</a> >
+    <a href="{{ site.link }}/apply#{{ Term(post.team).slug }}">{{
+      Term(post.team).title
+    }}</a>
   </p>
   <h1 class="text--h1 title text-center">{{ post.title }}</h1>
   <p class="subtitle text-center">{{ post.subtitle }}</p>
