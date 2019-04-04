@@ -49,7 +49,8 @@
     <p class="text--h3 title">{{ post.sock_title }}</p>
     <p class="text--body body">{{ post.sock_body }}</p>
     <div class="cta-wrapper">
-      <a class="cta" href="{{ site.link }}{{ post.sock_cta_link_slug }}"
+      <a class="cta" href="{{ post.sock_cta_link }}"
+      {% if post.sock_cta_target_blank %}target="_blank"{% endif %}
         ><button class="btn">{{ post.sock_cta_label }}</button></a
       >
     </div>

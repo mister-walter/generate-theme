@@ -38,6 +38,34 @@
     </div>
 
     <div class="application-listings">
+      {% if post.client_application_open %}
+      <div class="team--group" id="client-application">
+        <p class="text--h2 team--title">{{ post.client_application_title }}</p>
+        {% if post.client_application_body %}
+        <p class="text--body team--body">{{ post.client_application_body }}</p>
+        {% endif %}
+        <div class="team--application-listing">
+          <div class="team--application-listing--item flex-parent flex-ac">
+            <div class="text-content">
+              <p class="text--h3 role--title">
+                {{ post.client_application_cta }}
+              </p>
+            </div>
+            <a
+              class="role--link text--body flex-parent flex-ac flex-jc"
+              href="{{ post.client_application_link }}"
+            >
+              <span class="link-blue text">Apply</span>
+              <img
+                class="arrow"
+                src="{{ theme.link }}/images/apply_arrow.svg"
+                role="presentation"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
       {% for team in post.meta('application_group') %}
       <div class="team--group" id="{{ Term(team.team).slug }}">
         <p class="text--h2 team--title">{{ Term(team.team).title }}</p>
