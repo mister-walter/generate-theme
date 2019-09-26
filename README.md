@@ -55,6 +55,20 @@ Docker is running on port 8000, however if you'd like the niceties of browsersyn
 
 We've got the theme building, but because it's not pure Wordpress/PHP we need to install a plugin before we activate the theme:
 
+#### Fixing Permissions Issues
+
+If you have problems installing Timber using the steps below (for example, it might ask you for FTP login information or say "failed to create folder"), you should do the following:
+
+* Run `docker container ls` to figure out the ID of the container running the `wordpress:latest` image.
+* Run the following command, replacing `#ID#` with the ID found in the previous step (at least the first few characters of the ID)
+  `docker exec #ID# bash -c "mkdir -p /var/www/html/wp-content/plugins && mkdir -p /var/www/html/wp-content/uploads && chown www-data:www-data /var/www/html/wp-content && chown www-data:www-data /var/www/html/wp-content/plugins && chown www-data:www-data /var/www/html/wp-content/uploads"`
+
+This should fix the permissions on the relevant directories and allow you to install the plugin. You may have to reload the plugin installation page.
+
+For more information about why this is required, see https://github.com/docker-library/wordpress/issues/298.
+
+#### Installing Timber
+
 * Navigate to `localhost:3000/wp-admin` and login with your wordpress account
 * `Plugins > Add New`, and search for `Timber`. Make sure to hit `Activate` after hitting `Install Now`
 * Then activate the theme: `Appearance > My Theme`
