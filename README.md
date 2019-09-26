@@ -33,6 +33,10 @@ This is a starter project to create a new Wordpress theme using Timber, SCSS, an
 1. This starts Docker in detached mode (`-d`). To kill the process run `docker-compose down`. **This will remove persisted data. Only do this when you're cleaning up a project.**
 1. That's it!! Docker should be running on `localhost:8000`
 
+### Setting up the Site
+
+When you open your local copy of the site for the first time, it will show an installation wizard. You can enter in whatever values you like here, but you will need to remember the username and password to log into it later.
+
 ### Using Gulp
 
 In order to see the theme you have to run `gulp build` first then `gulp watch`, because wordpress is looking for the compiled version of the theme.
@@ -64,6 +68,18 @@ Make sure you change your Wordpress' permalinks rules to `Post name`.
 * Navigate to `localhost:3000/wp-admin`
 * `Settings > Permalinks` change to `Post name`. This will ensure 404 handling using our templates.
 
+### Adding content
+
+After getting the theme installed, the site will not have much content. The easiest way to get some content is to copy the live site:
+
+* Export the contents of the live site (Tools > Export > Download Export File on its WordPress Dashboard)
+* Install and activate the WordPress Importer plugin on your local WordPress installation
+* Import the file you got from exporting in a previous step by going to Tools > Import on the WordPress Dashboard of your local WordPress installation. This will take some time (a few minutes max) and will show a bunch of failures when it's done; this is OK.
+* Delete any old pages that were automatically created by the installation wizard (i.e. pages created by your username and not generate-mgmt)
+* Set the homepage of the website: Go to Settings > Reading and change the value of "Your homepage displays" to "A static page", choosing the page "Home" in the dropdown menu next to "Homepage:".
+
+If you add another page template (i.e. a Twig file under `src/templates/pages/`), you also need to add a WordPress page and tell it to use that template. You can create a new page by going to Pages > Add New. Once your new page shows up on screen, pick the template from the dropdown "Parent page" inside of the "Page Attributes" section of the settings panel on the right hand side of the screen. If you don't see the settings panel, you may need to click on the settings button on the top right of the screen (it has a gear icon).
+
 ## Development
 
 1. `yarn start`
@@ -73,6 +89,7 @@ Make sure you change your Wordpress' permalinks rules to `Post name`.
 
 * Make sure that whenever you pull from the repository you run `gulp build`
 * If links aren't working login to the `wp-admin` and under settings/permalinks check and uncheck post name option and save (it resets the redirect for wordpress)
+* If you get permissions errors when running `gulp build` or `yarn start` (something like `Error: EACCES: permission denied ...`), you may need to change the owner of the build folder. To change permissions, do something like `chown -R #username# build` if you're on a Linux or macOS machine. You may need to prepend this command with `sudo`. Sometimes the Docker WordPress instance will change the permissions of files in this folder.
 
 ## Directory Structure
 
