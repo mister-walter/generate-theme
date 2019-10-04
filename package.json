@@ -54,9 +54,14 @@
     "wp-ajax-page-loader": "0.3.1"
   },
   "lint-staged": {
-    "*.{js,json,css,scss,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
-    "@nuscout/prettier-config": "^0.1.2"
+    "@nuscout/prettier-config": "^0.1.2",
+    "basiclightbox": "^5.0.2",
+    "postcss-import": "^12.0.1"
   }
 }
