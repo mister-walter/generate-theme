@@ -4,11 +4,13 @@ const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')({ camelize: true });
 const merge = require('merge-stream');
 const config = require('../../gulpconfig').scripts;
+const concat = require('gulp-concat');
 
 // Minify scripts in place
 gulp.task('scripts-minify', function() {
   return (gulp
       .src(config.minify.src)
+      .pipe(concat('main.js'))
       .pipe(plugins.sourcemaps.init())
       // .pipe(plugins.uglify(config.minify.uglify))
       .pipe(plugins.sourcemaps.write('./'))
