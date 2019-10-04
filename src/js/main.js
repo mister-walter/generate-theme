@@ -63,6 +63,17 @@ $(function() {
     }
   }
 
+  $('.basiclightbox').click(function() {
+    img_url = $(this).attr('lightbox-img');
+    basicLightbox
+      .create(
+        `
+		<img width="1400" height="900" src="${img_url}">
+	`
+      )
+      .show();
+  });
+
   $(document).ready(function() {
     if (
       document.querySelector(
