@@ -5,7 +5,8 @@ const gutil = require('gulp-util');
 const plugins = require('gulp-load-plugins')({ camelize: true });
 const config = require('../../gulpconfig').styles;
 const autoprefixer = require('autoprefixer');
-const processors = [autoprefixer(config.autoprefixer)]; // Add additional PostCSS plugins to this array as needed
+const atImport = require('postcss-import');
+const processors = [autoprefixer(config.autoprefixer), atImport()]; // Add additional PostCSS plugins to this array as needed
 
 // Build stylesheets from source Sass files, autoprefix, and write source maps (for debugging) with libsass
 gulp.task('styles-libsass', function() {

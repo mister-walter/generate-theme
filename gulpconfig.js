@@ -47,7 +47,10 @@ module.exports = {
 
   scripts: {
     minify: {
-      src: src + 'js/**/*.js',
+      src: [
+        src + 'js/**/*.js',
+        modules + '/basiclightbox/dist/basicLightbox.min.js',
+      ],
       uglify: {}, // Default options
       dest: build + 'js/',
     },

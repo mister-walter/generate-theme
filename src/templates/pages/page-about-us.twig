@@ -64,6 +64,35 @@
   </div>
 </section>
 
+<section id="process" class="pos-rel">
+  <div class="content-wrapper split--content-wrapper reverse pad flex-parent">
+    <div class="img-wrapper">
+      <div
+        class="purpose-img img img-background"
+        style="background-image: url({{
+          Image(post.process_section_image).src
+        }});"
+        aria-label="{{ Image(post.process_section_image).alt }}"
+      /></div>
+    </div>
+    <div class="content">
+      <h1 class="text--h1 title">
+        {{ post.process_section_title }}
+      </h1>
+      <p class="text--body body" style="white-space: pre-line;">
+        {{ post.process_section_body }}
+      </p>
+      <div class="cta-wrapper">
+        <a id="process_show_graphic" class="cta basiclightbox" lightbox-img="{{ Image(post.process_section_main_diagram).src }}"
+          ><button class="btn">
+            {{ post.process_section_cta_label }}
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="about--team-roster">
   <div class="heading-content pad">
     <h2 class="text--h1 text-center title">{{ post.teams_section_title }}</h2>
