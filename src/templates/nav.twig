@@ -6,14 +6,14 @@
         ><img class="logo" src="{{ theme.link }}/images/logo-small.svg"
       /></a>
       <ul class="nav-list hide-md">
-        <li class="nav-item">
+      <li class="nav-item {% if post == 'About Us' %} active {% endif %}">
           <a href="{{ site.link }}/about-us">About Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item {% if post == 'Our Team' %} active {% endif %}">
           <a href="{{ site.link }}/our-team">Our Team</a>
         </li>
         <!-- <li class="nav-item"><a href="{{ site.link }}/clients">Our Clients</a></li> -->
-        <li class="nav-item">
+        <li class="nav-item {% if post == 'How to Apply' %} active {% endif %}">
           <a href="{{ site.link }}/apply">How to Apply</a>
         </li>
       </ul>
@@ -28,15 +28,16 @@
         </div>
         <div class="mobile--navigation">
           <ul class="nav-list">
-            <li class="nav-item"><a href="{{ site.link }}/">Home</a></li>
-            <li class="nav-item">
+            <li class="nav-item {% if homePage %} active {% endif %}">
+              <a href="{{ site.link }}/">Home</a></li>
+            <li class="nav-item {% if post == 'About Us' %} active {% endif %}">
               <a href="{{ site.link }}/about-us">About Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if post == 'Our Team' %} active {% endif %}">
               <a href="{{ site.link }}/our-team">Our Team</a>
             </li>
             <!-- <li class="nav-item"><a href="{{ site.link }}/clients">Our Clients</a></li> -->
-            <li class="nav-item">
+            <li class="nav-item {% if post == 'How to Apply' %} active {% endif %}">
               <a href="{{ site.link }}/apply">How to Apply</a>
             </li>
           </ul>
