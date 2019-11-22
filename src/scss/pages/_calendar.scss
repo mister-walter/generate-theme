@@ -1,0 +1,82 @@
+#cal-hero {
+  position: relative;
+  &::before,
+  &::after {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    background-image: radial-gradient($blue $dot-size, transparent 0),
+      radial-gradient($blue $dot-size, transparent 0);
+    background-size: $dot-space $dot-space;
+    opacity: 0.2;
+    height: 120px;
+  }
+  // top left
+  &::before {
+    width: 70%;
+    max-width: 340px;
+    top: -50px;
+    left: 0;
+  }
+  // bottom right
+  &::after {
+    width: 70%;
+    max-width: 460px;
+    top: 50px;
+    right: 0;
+    @media (max-width: $mdscreen) {
+      content: none;
+    }
+  }
+}
+
+#event-calendar {
+  &::before {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    // top: -171px;
+    width: 100%;
+    right: 0;
+    max-width: 1100px;
+    padding-top: 60vw;
+    background: url('./images/yellow_slant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px bottom;
+    transform: scale(-1 -1);
+    @media (max-width: $smscreen) {
+      top: -61px;
+      background-size: 100%;
+    }
+  }
+  div.calendar-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+  }
+  #calendar {
+    padding: 1em;
+  }
+
+  .fc-button-primary {
+    color: #fff;
+    background-color: $blue;
+    border: none;
+  }
+
+  .fc-unthemed {
+    td {
+      background: white;
+      background-clip: padding-box;
+    }
+    .fc-event,
+    .fc-event-dot {
+      background-color: $blue;
+      border: none;
+    }
+    .fc-day-grid-event {
+      padding: 1px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{% extends "base.twig" %} {% block content %}
+<section id="cal-hero">
+    <div class="content-wrapper cal--hero--content-wrapper pad">
+        <h1 class="text--h1 title">
+        {{ post.hero_title }}
+        </h1>
+    </div>
+</section>
+
+<section id="event-calendar">
+    {# <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=dGY5NGJyODl0c3VlN2hlc2E4b2lmbzlrZWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bGdyMnY0MWgyYTc1YzR2b20wNGlpcGxkZTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bWFrZXJzY2x1YkBub3J0aGVhc3Rlcm4uZWR1&amp;src=d2FsdGVyLmFAaHVza3kubmV1LmVkdQ&amp;color=%23DD5511&amp;color=%236633CC&amp;color=%23227F63&amp;color=%233366CC&amp;color=%239D7000&amp;showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div> #}
+    <div id="calendar"></div>
+</section>
+{% endblock %}
