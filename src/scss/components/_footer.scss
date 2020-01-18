@@ -19,6 +19,9 @@
     }
 
     .contact-form--wrapper {
+      #mc_embed_signup {
+        width: 100%;
+      }
       .title {
         font-family: $font-plex;
         color: $black;
@@ -34,9 +37,16 @@
         max-width: 530px;
         margin-bottom: 40px;
       }
-      .form--content {
+      form {
+        #mc_embed_signup_scroll {
+          @extend .flex-parent;
+          @extend .flex-jc;
+        }
         width: 100%;
-        .input--email {
+        label[for='mce-EMAIL'] {
+          display: none;
+        }
+        #mce-EMAIL {
           margin-right: 20px;
           padding: 16px 22px;
           background: $white;
@@ -60,6 +70,12 @@
             border-color: $mid-grey;
           }
         }
+        .indicates-required {
+          display: none;
+        }
+        #mc-embedded-subscribe {
+          @extend .btn;
+        }
       }
     }
     @media (max-width: $smscreen + 120px) {
@@ -78,9 +94,11 @@
             font-size: 16px;
           }
         }
-        .form--content {
-          flex-direction: column;
-          .input--email {
+        form {
+          #mc_embed_signup_scroll {
+            flex-direction: column;
+          }
+          #mce-EMAIL {
             margin-bottom: 20px;
             width: 100%;
             max-width: unset;
