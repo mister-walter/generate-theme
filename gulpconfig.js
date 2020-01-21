@@ -7,7 +7,7 @@ const build = './build/'; // A temporary directory containing a development vers
 const dist = './dist/' + project + '/'; // The distribution package that you'll be uploading to your server; delete it anytime
 const assets = './assets/'; // A staging area for assets that require processing before landing in the source folder (example: icons before being added to a sprite sheet)
 const modules = './node_modules/'; // npm packages
-
+const zipname = 'theme.zip'; // Name of the theme zipfile to be uploaded to Wordpress
 // Project settings
 module.exports = {
   browsersync: {
@@ -120,6 +120,14 @@ module.exports = {
       theme: [src + 'templates/**/*.twig', src + '*.php'],
       livereload: build + '**/*',
       fonts: src + '**/*(*.eot|*.svg|*.ttf|*.woff)',
+    },
+  },
+
+  zip: {
+    src: dist,
+    dest: {
+      zipname: zipname,
+      zipdest: './dist/',
     },
   },
 };
