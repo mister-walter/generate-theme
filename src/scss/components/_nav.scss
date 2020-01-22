@@ -94,6 +94,11 @@ $mobile--nav--pad: 20px;
     &:not(:last-child) {
       margin-right: 25px;
     }
+
+    &.active a {
+      text-decoration: underline;
+      text-decoration-style: dashed;
+    }
   }
 }
 
